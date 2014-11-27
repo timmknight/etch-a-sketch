@@ -43,13 +43,26 @@ function userGridSize(num){
   changeSquareColor();
 };
 
+
+function trailGridSize(num){
+	var num = prompt("Please enter a number between 10 and 20")
+  while (num < 10 || num > 20 || isNaN(num)){
+    alert("That's not a number between 10 and 20")
+    var num = prompt("Please enter a number between 10 and 20")
+  }
+  createGrid(num);
+  changeSquareColor();
+};
+
 //This function changes the square color and then fades back to its original colour
 function trail(){
-  clearGrid()
+	var num = 10
+  trailGridSize(num);
   $('.square').css("background-color", "#CFCFCF")
   $('.square').hover(function () {
     $(this).css("background-color", "#CFCFCF")
-    $(this).fadeToggle("slow")
+    $(this).fadeTo("fast",0.5, function(){$(this).fadeTo("fast", 1)
+    });
   });
 }
 

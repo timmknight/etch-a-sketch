@@ -63,3 +63,15 @@
 .myButton:focus{
   outline:0;
 }
+
+footer {
+  width: 50%;
+  text-align: center;
+  margin: 510px auto 0 auto;
+  bottom: 0;
+}
+
+img {
+  height: 25px;
+  width: 25px;
+}
